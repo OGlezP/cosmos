@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="font-icons/all.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav id="navbar" class="navbar  navbar-expand-lg fixed-top ">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <i id="button" class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul id="menu-list" class="navbar-nav ml-auto ">
+          <li class="navbar-item">
+            <a id="#home" class="nav-link selected">Inicio</a>
+          </li>
+          <li class="navbar-item">
+            <a  id="#album-section" class="nav-link">Álbum</a>
+          </li>
+          <li class="navbar-item">
+            <a  id="#video-section" class="nav-link">Videos</a>
+          </li>
+          <li class="navbar-item">
+            <a  id="#fechas" class="nav-link">Fechas</a>
+          </li>
+          <li class="navbar-item">
+            <a  id="#gallery-section" class="nav-link">Galería</a>
+          </li>
+          <li class="navbar-item">
+            <a  id="#contacto" class="nav-link">Acerca De</a>
+          </li>
+        </ul>
+      </div>
+      <div id="social-icons" class="text-right">
+        <a href="http://www.facebook.com/cosmosonidos" target='_blank'><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com/cosmosonidos" target='_blank'><i class="fab fa-twitter-square"></i></a>
+        <a href="http://www.instagram.com/cosmosonidos" target='_blank'><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCeXJABD6bioJwRv7QCm-A0Q" target='_blank'><i
+            class="fab fa-youtube"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="items-container">
+      <div class="item item--uno visible"></div>
+      <div class="item item--dos"></div>
+      <div class="item item--tres"></div>
+    </div>
+    <div class="arrows">
+      <div id="left-arrow" class="arrow"><i class="fas fa-chevron-left"></i></div>
+      <div id="right-arrow" class="arrow"><i class="fas fa-chevron-right"></i></div>
+    </div>
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <div id="information">
+      <h1 class="text-center">COSMOS</h1>
+      <div id="text-introduccion">
+        <p><span id="cosmos-span">COSMOS</span> es un proyecto musical de experimentación con
+          el
+          rock, la música electrónica, clásica y diversas fuentes sonoras que surge en Guadalajara durante el 2018.
+        </p>
+        <hr id='line'>
+        <br>
+        <p class="text-right"><span id="descarga">Descarga-></span> <a href="./MediaKit/MEDIA KIT- COSMOS.pdf" target='_blank'
+            download="MEDIA KIT- COSMOS" style="color: #ABA561;  font-weight: 800;">MEDIA KIT</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="album-section">
+    <h2 class="text-center title-section">Álbum</h2>
+    <div class="items-container">
+      <div class='item visible'>
+
+        <div class="portada-and-description">
+          <div class="img-container">
+            <h2 class="album-title">La Ciudad</h2>
+            <img class="img-album" src="img/albums/album-1.jpg">
+          </div>
+          <div class="txt-and-playlist">
+            <p>Es el primer álbum y está compuesto de 7 temas, 2 de ellos instrumentales que sugieren un
+              viaje musical de inicio a fin. El álbum ya se encuentra en todas las plataformas digitales desde Enero
+              del 2019. Producido, grabado y mezclado por Oscar Gómez entre febrero y noviembre del 2018 en un
+              departamento
+              de alquiler en Guadalajara con la asistencia de José Ibarra y José Castro. Masterizado por Ozzie Olmos en
+              <a href="http://masterinc0.webnode.mx" target="_blank">MasterInc.</a>
+            </p>
+            <hr>
+            <div class="playlist-container">
+              <h3 id="spotify-title" class="text-center" style="color: #fff; margin-top: 10px;">Escúchalo en Spotify <i
+                  class="fab fa-spotify"></i></h3>
+              <iframe src="https://open.spotify.com/embed/album/7gtcIuQvXFf007bNLlEFOE" width="600" height="200"
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video-section">
+    <h2 class='text-center title-section'>videos</h2>
+    <div class="items-container container embed-responsive embed-responsive-16by9">
+      <div class='embed-responsive-item item visible'>
+        <div class="video">
+          <iframe id="video" src="https://www.youtube.com/embed/De6r3KKz8xc" allow="autoplay; encrypted-media"></iframe>
+        </div>
+        <div class="video-title">
+          <h2 class="text-center">Título: Cuando engañas</h2>
+        </div>
+      </div>
+      <div class='embed-responsive-item item'>
+        <div class="video">
+          <iframe id="video" src="https://www.youtube.com/embed/X2Sw9JSywV8" allow="autoplay; encrypted-media"></iframe>
+        </div>
+        <div class="video-title">
+          <h2 class="text-center">Título: Animales</h2>
+        </div>
+      </div>
+    </div>
+    <div class="arrows">
+      <div id="left-arrow" class="arrow"><i class="fas fa-chevron-left"></i></div>
+      <div id="right-arrow" class="arrow"><i class="fas fa-chevron-right"></i></div>
+    </div>
+  </section>
+
+  <section id="fechas">
+    <!--Seccion de proximas presentaciones-->
+    <h2 class="title-section">Conciertos</h2>
+    <div id="contenedor-principal">
+      <div id="info-container">
+        <ul id="lista-eventos">
+          <!--<li class="event-item" style="border-bottom: 1px #fff dotted;">
+            <h3>Próximamente...</h3>
+          </li>-->
+          <li class="event-item">
+            <div class="date-container">
+              <div class="date">
+                <div class="day">18</div>
+                <div class="month">May</div>
+                <div class="year">2019</div>
+              </div>
+            </div>
+            <div class="info-date-container">
+              <div class="city">Guadalajara, Jal.</div>
+              <div class="venue-container">
+                <div class="venue"><a href="" target="_blank">Av. Chapultepec. Escenario Guadalupe Zuno.</a></div>
+                <div class="hour text-center"><i class="fas fa-clock"></i> - 17:15</div>
+              </div>
+            </div>
+          </li>
+          <li class="event-item">
+            <div class="date-container">
+              <div class="date">
+                <div class="day">18</div>
+                <div class="month">May</div>
+                <div class="year">2019</div>
+              </div>
+            </div>
+            <div class="info-date-container">
+              <div class="city">Guadalajara, Jal.</div>
+              <div class="venue-container">
+                <div class="venue"><a href="" target="_blank">Av. Chapultepec. Escenario Guadalupe Zuno.</a></div>
+                <div class="hour text-center"><i class="fas fa-clock"></i> - 17:15</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--Fin Seccion de proximas presentaciones-->
+
+  <section id="gallery-section">
+    <h2 class='title-section'>Galería</h2>
+    <div class="items-containter">
+      <div class="item">
+        <div class="img-container">
+          <img class='img' src="./img/galleries/gallery-one/Cosmos (1).jpeg" alt="">
+        </div>
+        <div class="img-container">
+          <img class='img' src="./img/galleries/gallery-one/Cosmos (2).jpeg" alt="">
+        </div>
+        <div class="img-container">
+          <img class='img' src="./img/galleries/gallery-one/Cosmos (3).jpeg" alt="">
+        </div>
+        <div class="img-container">
+          <img class='img' src="./img/galleries/gallery-one/Cosmos (4).jpeg" alt="">
+        </div>
+        <div class="img-container">
+          <img class='img' src="./img/galleries/gallery-one/Cosmos (5).jpeg" alt="">
+        </div>
+        <div class="img-container">
+          <img class='img' src="./img/galleries/gallery-one/Cosmos (6).jpeg" alt="">
+        </div>
+        <div class="img-container">
+          <img class='img' src="./img/galleries/gallery-one/Cosmos (7).jpeg" alt="">
+        </div>
+        <div class="img-container">
+          <img class='img' src="./img/galleries/gallery-one/album-portada.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="lightbox-container">
+        <div class="close-button">
+          <i class="far fa-window-close"></i>
+        </div>
+        <div class="lightbox-item">
+          <img class='lb-img' src="./img/galleries/gallery-one/Cosmos (1).jpeg" alt="">
+        </div>
+        <div class="lightbox-item">
+          <img class='lb-img' src="./img/galleries/gallery-one/Cosmos (2).jpeg" alt="">
+        </div>
+        <div class="lightbox-item">
+          <img class='lb-img' src="./img/galleries/gallery-one/Cosmos (3).jpeg" alt="">
+        </div>
+        <div class="lightbox-item">
+          <img class='lb-img' src="./img/galleries/gallery-one/Cosmos (4).jpeg" alt="">
+        </div>
+        <div class="lightbox-item">
+          <img class='lb-img' src="./img/galleries/gallery-one/Cosmos (5).jpeg" alt="">
+        </div>
+        <div class="lightbox-item">
+          <img class='lb-img' src="./img/galleries/gallery-one/Cosmos (6).jpeg" alt="">
+        </div>
+        <div class="lightbox-item">
+          <img class='lb-img' src="./img/galleries/gallery-one/Cosmos (7).jpeg" alt="">
+        </div>
+        <div class="lightbox-item">
+          <img class='lb-img' src="./img/galleries/gallery-one/album-portada.jpg" alt="">
+        </div>
+        <div class="arrows">
+          <div id="left-arrow" class="arrow"><i class="fas fa-chevron-left"></i></div>
+          <div id="right-arrow" class="arrow"><i class="fas fa-chevron-right"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2 class="title-section">Cosmos es</h2>
+    <div id="info-container">
+      <div id="band-members">
+        <p class="member"><span class="name-member">Oscar Gómez</span> - voz, piano, sintetizadores, programaciones</p>
+        <p class="member"><span class="name-member">Christian Padilla</span> - batería</p>
+        <p class="member"><span class="name-member">José Castro</span> - guitarra, bajo, coros</p>
+        <p class="member"><span class="name-member">Daniel Neri</span> - bajo</p>
+        <p class="member"><span class="name-member">José Ibarra</span> - guitarra, coros</p>
+      </div>
+      <br><br>
+
+      <h3 class="subtitle">Booking</h3>
+      <p id="contacto-email" class="text-center">cosmosonidos@gmail.com</p>
+      <br><br>
+
+      <h3 class="subtitle">Media Kit</h3>
+      <p id="contacto-email" class="text-center">Descarga el <a href="./MediaKit/MEDIA KIT- COSMOS.pdf" target='_blank'
+          download="MEDIA KIT- COSMOS" style="color: #ABA561;  font-weight: 800;">MEDIA KIT</a></p>
+      <br><br>
+
+    </div>
+  </section>
+  <footer>
+    <div id="social-container">
+      <h3 class="subtitle">Síguenos</h3>
+      <div id="icons">
+        <div class="social-icon">
+            <a href="http://www.facebook.com/cosmosonidos" target='_blank'>
+              <div>
+                <i class="fab fa-facebook-f"></i>
+                <div class="social-name">Facebook</div>
+              </div>
+            </a>
+        </div>
+        
+        <div class="social-icon">
+            <a href="https://twitter.com/cosmosonidos" target='_blank'>
+              <div>
+                <i class="fab fa-twitter"></i>
+                <div class="social-name">Twitter</div>
+              </div>
+            </a>
+        </div>
+        
+        <div class="social-icon">
+            <a href="http://www.instagram.com/cosmosonidos" target='_blank'>
+              <div>
+                <i class="fab fa-instagram"></i>
+                <div class="social-name">Instagram</div>
+              </div>
+            </a>
+        </div>
+        
+        <div class="social-icon">
+            <a href="https://www.youtube.com/channel/UCeXJABD6bioJwRv7QCm-A0Q" target='_blank'>
+            <div>
+              <i class="fab fa-youtube"></i>
+              <div class="social-name">Youtube</div>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
