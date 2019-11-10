@@ -1,15 +1,12 @@
-console.log('hola');
-
-
-var arrows = document.querySelectorAll('.arrow');
-var dots = document.querySelectorAll('.dot');  //to attach click event
-var navBar = document.querySelector('#navbar');
-var navBarItem = Array.from(document.querySelectorAll('.nav-link'));
-var sections =  Array.from(document.querySelectorAll('section'));
-var images =  Array.from(document.querySelectorAll('.img'));
-var lightboxImg = Array.from(document.querySelectorAll('.lightbox-item'));
-var exitButton = document.querySelector('.close-button');
-var lightBox = document.querySelector('.lightbox-container');
+const arrows = document.querySelectorAll('.arrow');
+const dots = document.querySelectorAll('.dot');  //to attach click event
+const navBar = document.querySelector('#navbar');
+const navBarItem = Array.from(document.querySelectorAll('.nav-link'));
+const sections =  Array.from(document.querySelectorAll('section'));
+const images =  Array.from(document.querySelectorAll('.img'));
+const lightboxImg = Array.from(document.querySelectorAll('.lightbox-item'));
+const exitButton = document.querySelector('.close-button');
+const lightBox = document.querySelector('.lightbox-container');
 let index = 0, interval;
 let items = [], dotElement = [];
 
@@ -113,7 +110,7 @@ function navbarOnScroll() {
     sections.forEach(section => {
         let rect = section.getBoundingClientRect();
         let rectuno = sections[1].getBoundingClientRect();
-        console.log(rectuno.y);
+        //console.log(rectuno.y);
 
         let y = parseInt(rect.y);
         if(y <= 0) {
@@ -162,7 +159,7 @@ function exitFunction() {
 }
 
 function handleDirection() {
-    let index;
+    let index = 0;
     lightboxImg.forEach(item => {
         if(item.classList.contains('visible')) {
             index = lightboxImg.indexOf(item);

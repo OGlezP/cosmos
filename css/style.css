@@ -501,12 +501,11 @@ html {
   padding-top: 100px 0;
   width: 100%;
   height: 90vh;
-  background-image: url("../img/slider/uno.jpg");
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  position: relative;
-  background-position: 50% 50%;
   background-repeat: no-repeat;
+  position: relative;
   border-top: 2.5rem rgba(26, 21, 12, 0.897) solid;
   border-bottom: 2.5rem rgba(26, 21, 12, 0.897) solid;
 }
@@ -646,7 +645,7 @@ html {
   left: 0;
   top: 0;
   padding-top: 90px;
-  background-color: #252323;
+  background-color: rgba(37, 35, 35, 0.774);
   background-image: url("../img/what-the-hex-dark.png");
   background-repeat: repeat;
   opacity: .65;
@@ -1044,9 +1043,6 @@ footer #social-container #icons .social-icon:hover .social-name {
     font-size: 2rem;
     width: 95%;
   }
-  #fechas {
-    content: url("../img/slider/uno-mobile.jpg");
-  }
   #fechas #contenedor-principal #info-container {
     width: 550px;
   }
@@ -1075,9 +1071,6 @@ footer #social-container #icons .social-icon:hover .social-name {
   }
   #fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .venue-container .hour {
     font-size: 1.3rem;
-  }
-  #gallery-section {
-    content: url("../img/back-gallery-section-mobile.jpg");
   }
   #gallery-section .items-containter {
     padding: 1rem;
@@ -1219,6 +1212,9 @@ footer #social-container #icons .social-icon:hover .social-name {
     position: relative;
     bottom: 5.5rem;
     width: 90%;
+  }
+  #fechas {
+    background-image: url("../img/slider/uno-mobile.jpg");
   }
   #fechas #contenedor-principal #info-container {
     width: 90%;

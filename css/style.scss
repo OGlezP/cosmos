@@ -460,12 +460,12 @@ html {
   padding-top: 100px 0;
   width: 100%;
   height: 90vh;
-  background-image: url("../img/slider/uno.jpg");
+  //background-image: url("../img/slider/uno.jpg");
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  position: relative;
-  background-position: 50% 50%;
   background-repeat: no-repeat;
+  position: relative;
   border-top: 2.5rem rgba(26, 21, 12, 0.897) solid;
   border-bottom: 2.5rem rgba(26, 21, 12, 0.897) solid;
   .title-section {
@@ -558,7 +558,6 @@ html {
   }
 }
 
-
 #fechas::before {
   content: "";
   width: 100%;
@@ -567,7 +566,7 @@ html {
   left: 0;
   top: 0;
   padding-top: 90px;
-  background-color: rgb(37, 35, 35);
+  background-color: rgba(37, 35, 35, 0.774);
   background-image: url('../img/what-the-hex-dark.png');
   background-repeat: repeat;
   opacity: .65;
@@ -938,7 +937,6 @@ footer {
   }
 
   #fechas {
-    content: url("../img/slider/uno-mobile.jpg");
     #contenedor-principal {
       #info-container {
       width: 550px;
@@ -972,7 +970,6 @@ footer {
   }
 
   #gallery-section {
-  content: url("../img/back-gallery-section-mobile.jpg");
     .items-containter {
       padding: 1rem;
       width: 80%;
@@ -1137,6 +1134,7 @@ footer {
   }
 
   #fechas {
+    background-image: url('../img/slider/uno-mobile.jpg');
     #contenedor-principal {
       #info-container {
       width: 90%;
@@ -1167,8 +1165,6 @@ footer {
       }
     }
   }
-
-//gallery
 
   #contacto {
     /*.title-section {
