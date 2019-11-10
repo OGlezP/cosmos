@@ -1044,6 +1044,9 @@ footer #social-container #icons .social-icon:hover .social-name {
     font-size: 2rem;
     width: 95%;
   }
+  #fechas {
+    content: url("../img/slider/uno-mobile.jpg");
+  }
   #fechas #contenedor-principal #info-container {
     width: 550px;
   }
@@ -1072,6 +1075,9 @@ footer #social-container #icons .social-icon:hover .social-name {
   }
   #fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .venue-container .hour {
     font-size: 1.3rem;
+  }
+  #gallery-section {
+    content: url("../img/back-gallery-section-mobile.jpg");
   }
   #gallery-section .items-containter {
     padding: 1rem;
