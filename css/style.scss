@@ -492,7 +492,6 @@ html {
       @include box-shadows;
       background-color: rgba(0, 0, 0, 0.616);
       border-radius: 1rem;
-     // padding: 2rem 0;
       .event-item {
         width: 100%;
         @include center;
@@ -561,9 +560,6 @@ html {
   width: 100%;
   height: 100%;
   position: absolute;
- // left: 0;
- // top: 0;
-  //padding-top: 90px;
   background-color: rgba(37, 35, 35, 0.774);
   background-image: url('../img/what-the-hex-dark.png');
   background-repeat: repeat;
@@ -580,16 +576,27 @@ html {
   @include center();
   flex-direction: column;
   height: auto;
-  background-image: url("../img/back-gallery-section.png");
+  /*background-image: url("../img/back-gallery-section.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
   padding: 100px 0;
   position: relative;
+  #background-gallery {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../img/back-gallery-section.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   .title-section {
     @include style-subtittles();
     color: rgb(0, 0, 0);
+    z-index: 2;
   }
   .items-containter {
     padding: 2rem;
@@ -597,6 +604,7 @@ html {
     height: auto;
     background-color: rgba(44, 53, 61, 0.767);
     border-radius: .5rem;
+    z-index: 2;
     .item {
       padding: 1rem;
       display: grid;
@@ -946,7 +954,6 @@ footer {
             .date-container {
               .date {
                 width: 7rem;
-               // height: 110px;
                 .day { font-size: 3rem; }
                 .month { font-size: 2rem; }
                 .year { font-size: 1rem; }
@@ -1084,8 +1091,10 @@ footer {
   }
 
   #album-section {
+    padding: 50px 0;
     .title-section {
       font-size: 2.5rem;
+      margin-bottom: 1.5rem;
     }
     .items-container {
       width: 90%;
@@ -1116,6 +1125,7 @@ footer {
     padding: 50px 0;
     .title-section {
       font-size: 2.5rem;
+      margin-bottom: 1.5rem;
     }
     .items-container {
       width: 90%;
@@ -1139,9 +1149,10 @@ footer {
   }
 
   #fechas {
-    padding: 50px 0;
+    padding: 70px 0;
     .title-section {
       font-size: 2.5rem;
+      margin-bottom: 1.5rem;
     }
     #info-container {
     width: 80%;
@@ -1177,15 +1188,44 @@ footer {
   }
 
   #gallery-section {
+    padding: 50px 0;
+    #background-gallery {
+      content: url("../img/back-mobile-gallery.jpg");
+    }
     .title-section {
       font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .items-containter {
+      padding: .5rem;
+      width: 70%;
+      .item {
+        grid-template-columns: auto auto;
+      }
+      .lightbox-container {
+        .close-button {
+          font-size: 3.5rem;
+        }
+        .lightbox-item {
+          width: 80%;
+        }
+        .arrows {
+          font-size: 1.8rem;
+          width: 95%;
+          .arrow {
+            padding: .7rem;
+          }
+        }
+      }
     }
   }
 
   #contacto {
-    /*.title-section {
+    padding: 50px 0;
+    .title-section {
       font-size: 2.5rem;
-    }*/
+      margin-bottom: 1.5rem;
+    }
     #info-container {
       width: 90%;
       padding: 1rem;
@@ -1199,10 +1239,11 @@ footer {
   }
 
   footer {
+    padding: 30px 0;
     #social-container {
       .subtitle {
-        font-size: 2rem;
-        width: 70%;
+        font-size: 1.8rem;
+        width: 40%;
       }
       #icons {
         grid-template-columns: auto auto;

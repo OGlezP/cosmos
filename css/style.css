@@ -654,13 +654,24 @@ html {
   align-items: center;
   flex-direction: column;
   height: auto;
+  /*background-image: url("../img/back-gallery-section.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;*/
+  padding: 100px 0;
+  position: relative;
+}
+
+#gallery-section #background-gallery {
+  width: 100%;
+  height: 100%;
+  position: absolute;
   background-image: url("../img/back-gallery-section.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 100px 0;
-  position: relative;
 }
 
 #gallery-section .title-section {
@@ -671,6 +682,7 @@ html {
   border-bottom: 0.3rem solid #df6358;
   font-family: 'Righteous', cursive;
   color: black;
+  z-index: 2;
 }
 
 #gallery-section .items-containter {
@@ -679,6 +691,7 @@ html {
   height: auto;
   background-color: rgba(44, 53, 61, 0.767);
   border-radius: .5rem;
+  z-index: 2;
 }
 
 #gallery-section .items-containter .item {
@@ -1171,8 +1184,12 @@ footer #social-container #icons .social-icon:hover .social-name {
   #home::before {
     height: 50vh;
   }
+  #album-section {
+    padding: 50px 0;
+  }
   #album-section .title-section {
     font-size: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   #album-section .items-container {
     width: 90%;
@@ -1198,6 +1215,7 @@ footer #social-container #icons .social-icon:hover .social-name {
   }
   #video-section .title-section {
     font-size: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   #video-section .items-container {
     width: 90%;
@@ -1217,10 +1235,11 @@ footer #social-container #icons .social-icon:hover .social-name {
     width: 90%;
   }
   #fechas {
-    padding: 50px 0;
+    padding: 70px 0;
   }
   #fechas .title-section {
     font-size: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   #fechas #info-container {
     width: 80%;
@@ -1255,13 +1274,42 @@ footer #social-container #icons .social-icon:hover .social-name {
   #fechas #info-container #lista-eventos .event-item #prox {
     font-size: 1.5rem;
   }
+  #gallery-section {
+    padding: 50px 0;
+  }
+  #gallery-section #background-gallery {
+    content: url("../img/back-mobile-gallery.jpg");
+  }
   #gallery-section .title-section {
     font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  #gallery-section .items-containter {
+    padding: .5rem;
+    width: 70%;
+  }
+  #gallery-section .items-containter .item {
+    grid-template-columns: auto auto;
+  }
+  #gallery-section .items-containter .lightbox-container .close-button {
+    font-size: 3.5rem;
+  }
+  #gallery-section .items-containter .lightbox-container .lightbox-item {
+    width: 80%;
+  }
+  #gallery-section .items-containter .lightbox-container .arrows {
+    font-size: 1.8rem;
+    width: 95%;
+  }
+  #gallery-section .items-containter .lightbox-container .arrows .arrow {
+    padding: .7rem;
   }
   #contacto {
-    /*.title-section {
-      font-size: 2.5rem;
-    }*/
+    padding: 50px 0;
+  }
+  #contacto .title-section {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   #contacto #info-container {
     width: 90%;
@@ -1273,9 +1321,12 @@ footer #social-container #icons .social-icon:hover .social-name {
   #contacto #info-container .member .name-member {
     font-size: 1.3rem;
   }
+  footer {
+    padding: 30px 0;
+  }
   footer #social-container .subtitle {
-    font-size: 2rem;
-    width: 70%;
+    font-size: 1.8rem;
+    width: 40%;
   }
   footer #social-container #icons {
     grid-template-columns: auto auto;
