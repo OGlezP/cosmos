@@ -8,7 +8,7 @@ html {
 }
 
 #navbar {
-  z-index: 4;
+  z-index: 3;
   position: absolute;
   width: 100%;
   background-color: #000;
@@ -192,7 +192,7 @@ html {
 
 #home .dots {
   width: 100%;
-  z-index: 3;
+  z-index: 2;
   position: absolute;
   bottom: 1rem;
   display: inline-flex;
@@ -654,11 +654,6 @@ html {
   align-items: center;
   flex-direction: column;
   height: auto;
-  /*background-image: url("../img/back-gallery-section.png");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;*/
   padding: 100px 0;
   position: relative;
 }
@@ -672,6 +667,7 @@ html {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 #gallery-section .title-section {
@@ -715,7 +711,7 @@ html {
 }
 
 #gallery-section .items-containter .lightbox-container {
-  z-index: 4;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -956,10 +952,10 @@ footer #social-container #icons .social-icon:hover .social-name {
 
 @media screen and (max-width: 980px) {
   #home {
-    height: 70vh;
+    height: 85vh;
   }
   #home .items-container {
-    height: 70vh;
+    height: 85vh;
   }
   #home .items-container .item {
     height: 100%;
@@ -1002,7 +998,7 @@ footer #social-container #icons .social-icon:hover .social-name {
     font-size: 1.7rem;
   }
   #home::before {
-    height: 70vh;
+    height: 85vh;
   }
   #album-section .items-container {
     width: 80%;

@@ -48,7 +48,7 @@ html {
 }
 
 #navbar {
-  z-index: 4;
+  z-index: 3;
   position: absolute;
   width: 100%;
   background-color: #000;
@@ -206,7 +206,7 @@ html {
   }
   .dots {
     width: 100%;
-    z-index: 3;
+    z-index: 2;
     position: absolute;
     bottom: 1rem;
     display: inline-flex;
@@ -576,11 +576,6 @@ html {
   @include center();
   flex-direction: column;
   height: auto;
-  /*background-image: url("../img/back-gallery-section.png");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;*/
   padding: 100px 0;
   position: relative;
   #background-gallery {
@@ -592,6 +587,7 @@ html {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 1;
   }
   .title-section {
     @include style-subtittles();
@@ -623,7 +619,7 @@ html {
       }
     }
     .lightbox-container {
-      z-index: 4;
+      z-index: 10;
       @include center();
       position: fixed;
       left: 0;
@@ -836,9 +832,9 @@ footer {
 
 @media screen and (max-width: 980px) {
   #home {
-    height: 70vh;
+    height: 85vh;
     .items-container {
-      height: 70vh;
+      height: 85vh;
       .item {
         height: 100%;
       }
@@ -881,7 +877,7 @@ footer {
   }
 
   #home::before {
-    height: 70vh;
+    height: 85vh;
   }
 
   #album-section {
