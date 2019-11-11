@@ -136,7 +136,7 @@ html {
 #home .items-container .item {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   opacity: 0;
   transition: opacity 2s ease;
   background-position: center;
@@ -498,13 +498,9 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 100px 0;
+  padding: 200px 0;
   width: 100%;
-  height: 90vh;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  height: auto;
   position: relative;
   border-top: 2.5rem rgba(26, 21, 12, 0.897) solid;
   border-bottom: 2.5rem rgba(26, 21, 12, 0.897) solid;
@@ -520,14 +516,19 @@ html {
   z-index: 1;
 }
 
-#fechas #contenedor-principal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#fechas #back-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("../img/slider/uno.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-#fechas #contenedor-principal #info-container {
-  z-index: 0;
+#fechas #info-container {
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -535,7 +536,7 @@ html {
   height: auto;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos {
+#fechas #info-container #lista-eventos {
   color: #fff;
   width: 100%;
   height: auto;
@@ -550,90 +551,88 @@ html {
   -ms-box-shadow: 0px 50px 60px -25px black;
   background-color: rgba(0, 0, 0, 0.616);
   border-radius: 1rem;
-  padding: 1rem 0;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item {
+#fechas #info-container #lista-eventos .event-item {
   width: 100%;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'PT Serif', serif;
   border-bottom: .1rem #fff dotted;
+  padding: 1rem 0;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container {
+#fechas #info-container #lista-eventos .event-item .date-container {
   width: 20%;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date {
+#fechas #info-container #lista-eventos .event-item .date-container .date {
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: #F23725;
-  width: 8rem;
+  width: 7rem;
   -webkit-box-shadow: 6px 8px 13px -3px #000a03;
   -moz-box-shadow: 6px 8px 13px -3px #000a03;
   box-shadow: 6px 8px 13px -3px #000a03;
   -ms-box-shadow: 6px 8px 13px -3px #000a03;
-  letter-spacing: .2rem;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date .day {
+#fechas #info-container #lista-eventos .event-item .date-container .date .day {
   font-size: 3.5rem;
   margin-bottom: -15px;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date .month {
+#fechas #info-container #lista-eventos .event-item .date-container .date .month {
   font-size: 2.5rem;
   margin-bottom: -5px;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date .year {
+#fechas #info-container #lista-eventos .event-item .date-container .date .year {
   font-size: 1.5rem;
   padding-bottom: .5rem;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container {
+#fechas #info-container #lista-eventos .event-item .info-date-container {
   width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .city {
+#fechas #info-container #lista-eventos .event-item .info-date-container .city {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 150px;
-  padding: 2rem;
+  padding: 1rem;
   font-size: 1.5rem;
   border: 2px #fff solid;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .venue-container {
+#fechas #info-container #lista-eventos .event-item .info-date-container .venue-container {
   width: 65%;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .venue-container .venue {
-  font-size: 1.7rem;
+#fechas #info-container #lista-eventos .event-item .info-date-container .venue-container .venue {
+  font-size: 1.5rem;
   text-align: center;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .venue-container .venue a {
+#fechas #info-container #lista-eventos .event-item .info-date-container .venue-container .venue a {
   color: #fff;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .venue-container .hour {
-  font-size: 1.6rem;
+#fechas #info-container #lista-eventos .event-item .info-date-container .venue-container .hour {
+  font-size: 1.5rem;
   color: #e76161;
   font-weight: bold;
 }
 
-#fechas #contenedor-principal #info-container #lista-eventos .event-item:last-child {
+#fechas #info-container #lista-eventos .event-item:last-child {
   border-bottom: 0 #fff dotted;
 }
 
@@ -642,13 +641,11 @@ html {
   width: 100%;
   height: 100%;
   position: absolute;
-  left: 0;
-  top: 0;
-  padding-top: 90px;
   background-color: rgba(37, 35, 35, 0.774);
   background-image: url("../img/what-the-hex-dark.png");
   background-repeat: repeat;
   opacity: .65;
+  z-index: 1;
 }
 
 #gallery-section {
@@ -952,7 +949,7 @@ footer #social-container #icons .social-icon:hover .social-name {
     height: 70vh;
   }
   #home .items-container .item {
-    height: 70vh;
+    height: 100%;
   }
   #home .items-container .item--uno {
     content: url("../img/slider/uno-mobile.jpg");
@@ -1043,33 +1040,33 @@ footer #social-container #icons .social-icon:hover .social-name {
     font-size: 2rem;
     width: 95%;
   }
-  #fechas #contenedor-principal #info-container {
+  #fechas #back-container {
+    content: url("../img/slider/uno-mobile.jpg");
+  }
+  #fechas #info-container {
     width: 550px;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item {
-    padding: .5rem 0;
-  }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date {
+  #fechas #info-container #lista-eventos .event-item .date-container .date {
     width: 7rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date .day {
+  #fechas #info-container #lista-eventos .event-item .date-container .date .day {
     font-size: 3rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date .month {
+  #fechas #info-container #lista-eventos .event-item .date-container .date .month {
     font-size: 2rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date .year {
+  #fechas #info-container #lista-eventos .event-item .date-container .date .year {
     font-size: 1rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .city {
+  #fechas #info-container #lista-eventos .event-item .info-date-container .city {
     padding: 1rem;
     border: 1px #fff solid;
     font-size: 1.3rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .venue-container .venue {
+  #fechas #info-container #lista-eventos .event-item .info-date-container .venue-container .venue {
     font-size: 1.5rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .venue-container .hour {
+  #fechas #info-container #lista-eventos .event-item .info-date-container .venue-container .hour {
     font-size: 1.3rem;
   }
   #gallery-section .items-containter {
@@ -1153,7 +1150,7 @@ footer #social-container #icons .social-icon:hover .social-name {
     height: 50vh;
   }
   #home .items-container .item {
-    height: 50vh;
+    height: 100%;
   }
   #home .arrows {
     visibility: hidden;
@@ -1173,6 +1170,9 @@ footer #social-container #icons .social-icon:hover .social-name {
   }
   #home::before {
     height: 50vh;
+  }
+  #album-section .title-section {
+    font-size: 2.5rem;
   }
   #album-section .items-container {
     width: 90%;
@@ -1196,6 +1196,9 @@ footer #social-container #icons .social-icon:hover .social-name {
   #video-section {
     padding: 50px 0;
   }
+  #video-section .title-section {
+    font-size: 2.5rem;
+  }
   #video-section .items-container {
     width: 90%;
   }
@@ -1214,36 +1217,46 @@ footer #social-container #icons .social-icon:hover .social-name {
     width: 90%;
   }
   #fechas {
-    background-image: url("../img/slider/uno-mobile.jpg");
+    padding: 50px 0;
   }
-  #fechas #contenedor-principal #info-container {
-    width: 90%;
+  #fechas .title-section {
+    font-size: 2.5rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item {
+  #fechas #info-container {
+    width: 80%;
+  }
+  #fechas #info-container #lista-eventos .event-item {
     padding: 1rem 0;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date {
-    width: 6rem;
+  #fechas #info-container #lista-eventos .event-item .date-container .date {
+    width: 5rem;
+    margin: 0;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date .day {
-    font-size: 2.8rem;
+  #fechas #info-container #lista-eventos .event-item .date-container .date .day {
+    font-size: 2.6rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date .month {
-    font-size: 1.8rem;
+  #fechas #info-container #lista-eventos .event-item .date-container .date .month {
+    font-size: 1.6rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .date-container .date .year {
+  #fechas #info-container #lista-eventos .event-item .date-container .date .year {
+    font-size: .8rem;
+  }
+  #fechas #info-container #lista-eventos .event-item .info-date-container .city {
+    padding: 1px;
+    border: .3px #fff solid;
+    font-size: .9rem;
+  }
+  #fechas #info-container #lista-eventos .event-item .info-date-container .venue-container .venue {
     font-size: 1rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .city {
-    padding: .5rem;
-    border: .5px #fff solid;
-    font-size: 1.2rem;
+  #fechas #info-container #lista-eventos .event-item .info-date-container .venue-container .hour {
+    font-size: .8rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .venue-container .venue {
-    font-size: 1.2rem;
+  #fechas #info-container #lista-eventos .event-item #prox {
+    font-size: 1.5rem;
   }
-  #fechas #contenedor-principal #info-container #lista-eventos .event-item .info-date-container .venue-container .hour {
-    font-size: 1.1rem;
+  #gallery-section .title-section {
+    font-size: 2.5rem;
   }
   #contacto {
     /*.title-section {

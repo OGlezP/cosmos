@@ -164,7 +164,7 @@ html {
     .item {
       position: absolute;
       width: 100%;
-      height: 100vh;
+      height: 100%;
       opacity: 0;
       transition: opacity 2s ease;
       background-position: center;
@@ -457,14 +457,9 @@ html {
 #fechas {
   @include center;
   flex-direction: column;
-  padding-top: 100px 0;
+  padding: 200px 0;
   width: 100%;
-  height: 90vh;
-  //background-image: url("../img/slider/uno.jpg");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  height: auto;
   position: relative;
   border-top: 2.5rem rgba(26, 21, 12, 0.897) solid;
   border-bottom: 2.5rem rgba(26, 21, 12, 0.897) solid;
@@ -472,87 +467,90 @@ html {
     @include style-subtittles;
     z-index: 1;
   }
-  #contenedor-principal {
-    @include center();
-    #info-container {
-      z-index: 0;
-      @include center;
-      //flex-direction: column;
-      width: 600px;
+  #back-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../img/slider/uno.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  #info-container {
+    z-index: 1;
+    @include center;
+    width: 600px;
+    height: auto;
+    #lista-eventos {
+      color: #fff;
+      width: 100%;
       height: auto;
-      #lista-eventos {
-        color: #fff;
+      list-style-type: none;
+      text-transform: uppercase;
+      padding-left: 0;
+      @include box-shadows;
+      background-color: rgba(0, 0, 0, 0.616);
+      border-radius: 1rem;
+     // padding: 2rem 0;
+      .event-item {
         width: 100%;
-        height: auto;
-        list-style-type: none;
-        text-transform: uppercase;
-        //@include center;
-        //flex-direction: column;
-        padding-left: 0;
-        @include box-shadows;
-        background-color: rgba(0, 0, 0, 0.616);
-        border-radius: 1rem;
+        @include center;
+        font-family: 'PT Serif', serif;
+        border-bottom: .1rem #fff dotted;
         padding: 1rem 0;
-        .event-item {
-          width: 100%;
-          position: relative;
-          @include center;
-          font-family: 'PT Serif', serif;
-          border-bottom: .1rem #fff dotted;
-          .date-container {
-            width: 20%;
-            .date {
-              margin: auto;
-              @include center;
-              flex-direction: column;
-              background-color: $color-dates;
-              width: 8rem;
-              @include box-dates();
-              letter-spacing: .2rem;
-              .day {
-                font-size: 3.5rem;
-                margin-bottom: -15px;
-              }
-              .month {
-                font-size: 2.5rem;
-                margin-bottom: -5px;
-              }
-              .year {
-                font-size: 1.5rem;
-                padding-bottom: .5rem;
-              }
-            }
-          }
-          .info-date-container {
-            width: 75%;
+        .date-container {
+          width: 20%;
+          .date {
+            margin: auto;
             @include center;
-            .city {
-              @include center();
-              width: 150px;
-              padding: 2rem;
-              font-size: 1.5rem;
-              border: 2px #fff solid;
+            flex-direction: column;
+            background-color: $color-dates;
+            width: 7rem;
+            @include box-dates();
+            .day {
+              font-size: 3.5rem;
+              margin-bottom: -15px;
             }
-            .venue-container {
-              width: 65%;
-              .venue {
-                font-size: 1.7rem;
-                text-align: center;
-                a {
-                  color: #fff;
-                }
-              }
-              .hour {
-                font-size: 1.6rem;
-                color: rgb(231, 97, 97);
-                font-weight: bold;
-              }
+            .month {
+              font-size: 2.5rem;
+              margin-bottom: -5px;
+            }
+            .year {
+              font-size: 1.5rem;
+              padding-bottom: .5rem;
             }
           }
         }
-        .event-item:last-child {
-          border-bottom: 0 #fff dotted;
+        .info-date-container {
+          width: 75%;
+          @include center;
+          .city {
+            @include center();
+            width: 150px;
+            padding: 1rem;
+            font-size: 1.5rem;
+            border: 2px #fff solid;
+          }
+          .venue-container {
+            width: 65%;
+            .venue {
+              font-size: 1.5rem;
+              text-align: center;
+              a {
+                color: #fff;
+              }
+            }
+            .hour {
+              font-size: 1.5rem;
+              color: rgb(231, 97, 97);
+              font-weight: bold;
+            }
+          }
         }
+      }
+      .event-item:last-child {
+        border-bottom: 0 #fff dotted;
       }
     }
   }
@@ -563,13 +561,14 @@ html {
   width: 100%;
   height: 100%;
   position: absolute;
-  left: 0;
-  top: 0;
-  padding-top: 90px;
+ // left: 0;
+ // top: 0;
+  //padding-top: 90px;
   background-color: rgba(37, 35, 35, 0.774);
   background-image: url('../img/what-the-hex-dark.png');
   background-repeat: repeat;
   opacity: .65;
+  z-index: 1;
 }
 //Fin de Formato de seccion fechas***************
 //***********************************************
@@ -833,7 +832,7 @@ footer {
     .items-container {
       height: 70vh;
       .item {
-        height: 70vh;
+        height: 100%;
       }
       @each $var in 'uno' 'dos' 'tres' {
         .item--#{$var} {
@@ -937,12 +936,13 @@ footer {
   }
 
   #fechas {
-    #contenedor-principal {
-      #info-container {
+    #back-container {
+      content: url('../img/slider/uno-mobile.jpg'); 
+    }
+    #info-container {
       width: 550px;
         #lista-eventos {
           .event-item {
-          padding: .5rem 0;
             .date-container {
               .date {
                 width: 7rem;
@@ -966,7 +966,6 @@ footer {
           }
         }
       }
-    }
   }
 
   #gallery-section {
@@ -1060,7 +1059,7 @@ footer {
     .items-container {
        height: 50vh;
        .item {
-         height: 50vh;
+         height: 100%;
        }
     }
     .arrows {
@@ -1085,6 +1084,9 @@ footer {
   }
 
   #album-section {
+    .title-section {
+      font-size: 2.5rem;
+    }
     .items-container {
       width: 90%;
       .item {
@@ -1112,6 +1114,9 @@ footer {
 
   #video-section {
     padding: 50px 0;
+    .title-section {
+      font-size: 2.5rem;
+    }
     .items-container {
       width: 90%;
       .item {
@@ -1134,35 +1139,46 @@ footer {
   }
 
   #fechas {
-    background-image: url('../img/slider/uno-mobile.jpg');
-    #contenedor-principal {
-      #info-container {
-      width: 90%;
-        #lista-eventos {
-          .event-item {
-          padding: 1rem 0;
-            .date-container {
-              .date {
-                width: 6rem;
-                .day { font-size: 2.8rem; }
-                .month { font-size: 1.8rem; }
-                .year { font-size: 1rem; }
-              }
+    padding: 50px 0;
+    .title-section {
+      font-size: 2.5rem;
+    }
+    #info-container {
+    width: 80%;
+    #lista-eventos {
+        .event-item {
+        padding: 1rem 0;
+          .date-container {
+            .date {
+              width: 5rem;
+              margin: 0;
+              .day { font-size: 2.6rem; }
+              .month { font-size: 1.6rem; }
+              .year { font-size: .8rem; }
             }
-            .info-date-container {
-              .city { 
-                padding: .5rem;
-                border: .5px #fff solid;
-                font-size: 1.2rem; 
-              }
-              .venue-container {
-                .venue { font-size: 1.2rem; }
-                .hour { font-size: 1.1rem; }
-              }
+          }
+          .info-date-container {
+            .city { 
+              padding: 1px;
+              border: .3px #fff solid;
+              font-size: .9rem; 
             }
+            .venue-container {
+              .venue { font-size: 1rem; }
+              .hour { font-size: .8rem; }
+            }
+          }
+          #prox {
+            font-size: 1.5rem;
           }
         }
       }
+    }
+  }
+
+  #gallery-section {
+    .title-section {
+      font-size: 2.5rem;
     }
   }
 
