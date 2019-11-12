@@ -19,8 +19,8 @@ $color-dates: #F23725;
 
 @mixin style-subtittles() {
   color: #fff;
-  font-size: 3.8rem;
-  margin-bottom: 5rem;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
   text-transform: uppercase;
   border-bottom: .3rem solid $color-border;
   font-family: 'Righteous', cursive;
@@ -48,24 +48,27 @@ html {
 }
 
 #navbar {
-  z-index: 3;
   position: absolute;
   width: 100%;
   background-color: #000;
   height: 6rem;
   color: #fff;
   transform: translateY(-6rem);
-  #menu-list {
+  z-index: 2;
+  #menu-list { 
+    padding: 0;
     position: absolute;
     left: 2rem;
     font-family: 'Big Shoulders Text', cursive;
+    @include center();
     .nav-link {
       color: $item-menu;
-      font-size: 2rem;
+      font-size: 1.5rem;
       letter-spacing: .15rem;
       margin-right: 1.2rem;
-      padding: .1rem .7rem;
+      padding: .1rem .4rem;
       text-transform: uppercase;
+      cursor: pointer;
     }
     .navbar-item:last-child .nav-link {
       margin-right: 0;
@@ -77,10 +80,9 @@ html {
   #social-icons {
     position: absolute;
     right: 2rem;
-    top: 1rem;
     i {
       padding: 5px;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: $item-menu;
     }
     i:hover {
@@ -90,8 +92,9 @@ html {
 }
 
 .selected { //selected menu item class
-  border: 2px solid $item-menu-hover;
+  border: .15rem solid $item-menu-hover;
   border-radius: .5rem;
+  box-sizing: border-box;
 }
 
 #navbar.menu-scrolled-down {    ///menu appears sliding from top to bottom
@@ -102,11 +105,10 @@ html {
 #navbar.scroll { //menu setting when scrolled down
   position: fixed;
   background-color: $back-menu-scrolled;
-  border-top: 1.8px solid rgb(84, 110, 110);
-  border-bottom: 1.8px solid rgb(84, 110, 110);
+  border-bottom: .5px solid rgb(84, 110, 110);
   transition: all 1s;
   .selected {
-    border: 2px solid #fff;
+    border: .15rem solid $item-menu-hover;
   }
 }
 
@@ -182,20 +184,19 @@ html {
     }
   }
   .arrows {
-    z-index: 3;
-    font-size: 3rem;
+    z-index: 1;
+    font-size: 2.5rem;
     color: #fff;
     position: absolute;
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
     .arrow {
-      background-color: rgba(231, 223, 220, 0.315);
-      padding: 2.5rem 1.5rem;
+      background-color: rgba(255, 255, 255, 0.315);
+      padding: 2.3rem 1.3rem;
       opacity: .5;
-      transition: .2s;
+      transition: all .2s;
       border-radius: .5rem;
-      @include center;
     }
     .arrow:hover {
       opacity: 1;
@@ -206,7 +207,7 @@ html {
   }
   .dots {
     width: 100%;
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     bottom: 1rem;
     display: inline-flex;
@@ -214,7 +215,7 @@ html {
     .dot {
       width: 1rem;
       height: 1rem;
-      background-color: rgb(209, 201, 201);
+      background-color: rgb(230, 218, 218);
       border-radius: 50%;
       margin: .5rem;
       cursor: pointer;
@@ -224,54 +225,52 @@ html {
     }
   }
   #information {
-    z-index: 2;
-    width: 850px;
+    z-index: 1;
+    width: 800px;
     position: absolute;
     @include center;
     flex-direction: column;
     h1 {
-      width: 60%;
       color:$title-color;
       font-family: 'Merriweather Sans', sans-serif;
-      font-size: 11rem;
-      line-height: 1.2;
-      letter-spacing: .5rem;
+      font-size: 10rem;
+      line-height: 1;
+      letter-spacing: .3rem;
       border-top:  #fff 2px solid;
       border-bottom: #fff 2px solid;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
     #text-introduccion {
       background-color: rgba(0, 0, 0, 0.76);
       @include box-shadows;
       height: auto;
       width: 90%;
-      padding: 2rem;
+      padding: 1rem;
       p {
         display: block;
         color: #fff;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-family: 'Noticia Text', serif;
-        letter-spacing: .2rem;
+        letter-spacing: .15rem;
         text-align: center;
         #cosmos-span {
           color: #ABA561; 
-          font-weight: 800; 
-          font-size: 2rem;
+          font-weight: 400; 
+          font-size: 1.8rem;
         }
         #descarga {
           color: $color-border;
-          font-weight: bold;
           animation: blink .8s linear infinite;
 	      }
         @keyframes blink{
-          //0%{opacity: 0;}
-          30%{opacity: .3;}
+          40%{opacity: .4;}
           60%{opacity: .6;}
+          80%{opacity: .8;}
           100%{opacity: 1;}
         }
       }
       #line {
-        border: .5px dotted #fff;
+        border: .2px dotted #fff;
       }
     }
   }
@@ -283,12 +282,12 @@ html {
   height: 100vh;
   left: 0;
   top: 0;
-  z-index: 1;
   position: absolute;
-  background-color: rgb(37, 35, 35);
+  background-color: rgb(73, 70, 70);
   background-image: url('../img/what-the-hex-dark.png');
   background-repeat: repeat;
-  opacity: .55;
+  opacity: .6;
+  z-index: 1;
 }
 
 //Formato de seccion de albumes************
@@ -298,43 +297,38 @@ html {
   border-bottom: 2.5rem rgba(26, 21, 12, 0.836) solid;
   width: 100%;
   @include center;
+  height: auto;
   flex-direction: column;
-  background-image: linear-gradient(to bottom right,rgb(63, 73, 73), rgb(86, 102, 102), rgb(72, 88, 88), rgb(89, 104, 104), rgb(63, 73, 73));
- // background-color: rgb(63, 73, 73);
-  padding: 100px 0;
+  background-image: linear-gradient(to bottom right,rgb(63, 73, 73), rgb(95, 112, 112), rgb(72, 88, 88), rgb(95, 112, 112), rgb(63, 73, 73));
+  padding: 80px 0;
   background-attachment: fixed;
   .title-section {
     @include style-subtittles();
   }
   .items-container {
-   // width: 65%;
-   max-width: 1150px;
-    //@include center;
+    max-width: 1150px;
     background-color: rgba(83, 80, 80, 0.733);
     border: .3rem solid rgb(158, 149, 149);
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1rem;
     .item {
-      //width: 100%;
-      //max-width: 1250px;
-      //background-color: rgba(41, 38, 39, 0.664);
+      background-color: rgba(41, 38, 39, 0.664);
       padding: 1rem;
       .portada-and-description {
         @include center;
         flex-direction: row;
         .img-container{
-          width: 35%;
-          margin-top: 0;
+          width: 30%;
           .album-title {
             color: #fff;
-            font-size: 2.5rem;
+            font-size: 2rem;
             text-align: center;
             border-radius: 1rem 1rem 0 0;
             margin: 0;
             background-color: rgb(53, 61, 61);
-            border-top: 1.8px solid rgb(84, 110, 110);
+            border-top: 1.5px solid rgb(84, 110, 110);
             text-transform: uppercase;
-            padding: .4em;
+            padding: .5rem;
           }
           .img-album {
             width: 100%;
@@ -345,11 +339,11 @@ html {
           }
         }
         .txt-and-playlist {
-          width: 65%;
+          width: 70%;
           p {
             display: block;
             color: rgb(255, 255, 255);
-            font-size: 1.57rem;
+            font-size: 1.25rem;
             font-family: 'Noticia Text', serif;
             letter-spacing: .15rem;
             text-align: center;
@@ -360,16 +354,16 @@ html {
             }
           }
           hr {
-            margin: 2rem auto;
+            margin: 1.5rem auto;
             width: 90%;
-            border: .5px rgb(255, 255, 255) dotted;
+            border: .4px rgb(226, 219, 219) dotted;
           }
           .playlist-container {
-            width: 80%;
+            width: 90%;
             margin: auto;
             #spotify-title {
               margin: 0;
-              padding: 1.5rem 0;
+              padding: .5rem;
               width: 100%;
               border-radius: 1rem 1rem 0 0;
               background-color: rgb(53, 61, 61);
@@ -379,7 +373,7 @@ html {
               border-radius: 0 0 1rem 1rem;
               width: 100%;
               border-right: .5px solid rgb(32, 22, 9);
-              height: 20rem;
+              height: 19rem;
             }
           }
         }
@@ -394,7 +388,7 @@ html {
   background-color: rgb(15, 15, 15);
   width: 100%;
   height: auto;
-  padding: 100px 0;
+  padding: 80px 0;
   @include center;
   flex-direction: column;
   .title-section {
@@ -402,6 +396,7 @@ html {
   }
   .items-container {
     width: 50%;
+    height: 100%;
     .item {
       padding-bottom: 6rem;
       opacity: 0;
@@ -441,7 +436,7 @@ html {
       visibility: visible;
     }
   }
-  .arrows {
+  /*.arrows {
     z-index: 1;
     font-size: 3.5rem;
     color: #fff;
@@ -449,13 +444,15 @@ html {
     width: 80%;
     display: inline-flex;
     justify-content: space-between;
-  }
+  }*/
 }
 
 //Inicio de Formato de seccion fechas************
 //***********************************************
 #fechas {
-  @include center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   padding: 200px 0;
   width: 100%;
@@ -471,11 +468,14 @@ html {
     width: 100%;
     height: 100%;
     position: absolute;
+    left: 0;
+    top: 0;
     background-image: url("../img/slider/uno.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    z-index: -1;
   }
   #info-container {
     z-index: 1;
@@ -564,7 +564,6 @@ html {
   background-image: url('../img/what-the-hex-dark.png');
   background-repeat: repeat;
   opacity: .65;
-  z-index: 1;
 }
 //Fin de Formato de seccion fechas***************
 //***********************************************
@@ -575,8 +574,8 @@ html {
 #gallery-section {
   @include center();
   flex-direction: column;
+  padding: 80px 0;
   height: auto;
-  padding: 100px 0;
   position: relative;
   #background-gallery {
     width: 100%;
@@ -587,115 +586,117 @@ html {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: 1;
   }
   .title-section {
     @include style-subtittles();
     color: rgb(0, 0, 0);
-    z-index: 2;
+    z-index: 1;
   }
   .items-containter {
-    padding: 2rem;
+    position: relative;
+    padding: 0rem;
     width: 70%;
     height: auto;
     background-color: rgba(44, 53, 61, 0.767);
     border-radius: .5rem;
-    z-index: 2;
+    z-index: 1;
+    padding: 1rem;
     .item {
-      padding: 1rem;
       display: grid;
       grid-template-columns: auto auto auto auto;
       grid-gap: 1rem;
       align-items: center;
-      align-self: stretch;  
+      //align-self: stretch;  
+      z-index: 1;
       .img-container {
         border: 1px solid rgb(190, 184, 184);
+        padding: .5rem;
         img {
-          padding: .7rem;
           width: 100%;
           height: auto;
           cursor: pointer;
         }
       }
     }
-    .lightbox-container {
-      z-index: 10;
-      @include center();
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: rgba(20, 19, 19, 0.76);
-      visibility: hidden;
+  }
+  .lightbox-container {
+    @include center();
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(20, 19, 19, 0.76);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    z-index: 2;
+    .close-button {
+      position: absolute;
+      top: 4rem;
+      right: 6rem;
+      font-size: 5rem;
+      color: rgb(197, 101, 101);
+      z-index: 100;
+    }
+    .lightbox-item {
+      width: 55%;
+      background-color: rgba(233, 233, 233, 0.904);
+      position: absolute;
+      padding: 1rem;
+      border-radius: 1rem;
+      -webkit-box-shadow: 4px 4px 16px 1px rgba(0,0,0,1);
+      -moz-box-shadow: 4px 4px 16px 1px rgba(0,0,0,1);
+      box-shadow: 4px 4px 16px 1px rgba(0,0,0,1);
+      border-bottom: .2rem solid rgb(31, 29, 29);
+      border-right: .2rem solid rgb(31, 29, 29);
+      border-left: .2rem solid #fff;
+      border-top: .2rem solid #fff;
       opacity: 0;
-      transition: all .3s;
-      .close-button {
-        position: absolute;
-        top: 4rem;
-        right: 6rem;
-        font-size: 5rem;
-        color: rgb(197, 101, 101);
-      }
-      .lightbox-item {
-        width: 55%;
-        background-color: rgba(233, 233, 233, 0.904);
-        position: absolute;
-        padding: 1rem;
-        border-radius: 1rem;
-        -webkit-box-shadow: 4px 4px 16px 1px rgba(0,0,0,1);
-        -moz-box-shadow: 4px 4px 16px 1px rgba(0,0,0,1);
-        box-shadow: 4px 4px 16px 1px rgba(0,0,0,1);
-        border-bottom: .2rem solid rgb(31, 29, 29);
-        border-right: .2rem solid rgb(31, 29, 29);
-        border-left: .2rem solid #fff;
-        border-top: .2rem solid #fff;
-        opacity: 0;
-        visibility: hidden;
-        .lb-img {
-          width: 100%;
-          height: auto;
-          border-radius: .5rem;
-          border-left: .2rem solid rgb(31, 29, 29);
-          border-top: .2rem solid rgb(31, 29, 29);
-          border-right: .2rem solid #fff;
-          border-bottom: .2rem solid #fff;
-          box-sizing: border-box;
-        }
-      }
-      .lightbox-item.visible {
-        visibility: visible;
-        opacity: 1;
-        transition: all .7s;
-      }
-      .arrows {
-        position: absolute;
-        font-size: 4rem;
-        color: #fff;
-        width: 70%;
-        display: inline-flex;
-        justify-content: space-between;
-        .arrow {
-          padding: 2rem;
-          background-color: rgba(228, 213, 213, 0.637);
-        }
-        #left-arrow {
-          border-radius: 1rem 0 0 1rem;
-        }
-        #right-arrow {
-          border-radius: 0 1rem 1rem 0;
-        }
-        .arrow:hover{
-          background-color: rgba(230, 180, 180, 0.5);
-          transition: all .2s;
-        }
+      visibility: hidden;
+      .lb-img {
+        width: 100%;
+        height: auto;
+        border-radius: .5rem;
+        border-left: .2rem solid rgb(31, 29, 29);
+        border-top: .2rem solid rgb(31, 29, 29);
+        border-right: .2rem solid #fff;
+        border-bottom: .2rem solid #fff;
+        box-sizing: border-box;
       }
     }
-    .lightbox-container.active {
+    .lightbox-item.visible {
       visibility: visible;
       opacity: 1;
-      transition: all .6s;
+      transition: all .7s;
     }
+    .arrows {
+      position: absolute;
+      font-size: 4rem;
+      color: #fff;
+      width: 70%;
+      display: inline-flex;
+      justify-content: space-between;
+      .arrow {
+        padding: 2rem;
+        background-color: rgba(228, 213, 213, 0.637);
+      }
+      #left-arrow {
+        border-radius: 1rem 0 0 1rem;
+      }
+      #right-arrow {
+        border-radius: 0 1rem 1rem 0;
+      }
+      .arrow:hover{
+        background-color: rgba(230, 180, 180, 0.5);
+        transition: all .2s;
+      }
+    }
+  }
+  .lightbox-container.active {
+    visibility: visible;
+    opacity: 1;
+    transition: all .6s;
   }
 }
 //FIN DE SECCION GALERIA///////////////
@@ -710,7 +711,7 @@ html {
   width: 100%;
   height: auto;
   background-color: rgb(15, 15, 15);
-  padding: 100px 0;
+  padding: 80px 0;
   .title-section {
     @include style-subtittles();
     margin: 2rem;
@@ -729,20 +730,20 @@ html {
       background-color: rgb(46, 53, 51);
     }
     .member {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       letter-spacing: .15rem;
       color: #fff;
       font-family: 'Noticia Text', serif;   
       .name-member {
         text-transform: uppercase;
         color: rgb(156, 151, 93);  
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 800;
       }
     }
     .subtitle {
       color: #fff;
-      font-size: 2.7rem;
+      font-size: 2.5rem;
       text-transform: uppercase;
       border-bottom: .2rem solid rgb(180, 93, 93);
       font-family: 'Righteous', cursive;
@@ -751,7 +752,7 @@ html {
       margin: auto;
     }
     #contacto-email {
-      font-size: 2rem;
+      font-size: 1.8rem;
       letter-spacing: .18rem;
       color: #fff;
       font-family: 'Big Shoulders Text', cursive;
@@ -763,7 +764,7 @@ html {
 
 //Footer///////////////////
 footer {
-  padding: 80px 0;
+  padding: 50px 0;
   width: 100%;
   background-color: rgb(43, 42, 42);
   #social-container {
@@ -832,9 +833,9 @@ footer {
 
 @media screen and (max-width: 980px) {
   #home {
-    height: 85vh;
+    height: 90vh;
     .items-container {
-      height: 85vh;
+      height: 90vh;
       .item {
         height: 100%;
       }
@@ -877,7 +878,7 @@ footer {
   }
 
   #home::before {
-    height: 85vh;
+    height: 90vh;
   }
 
   #album-section {
@@ -940,35 +941,36 @@ footer {
   }
 
   #fechas {
+    padding: 150px 0;
     #back-container {
       content: url('../img/slider/uno-mobile.jpg'); 
     }
     #info-container {
-      width: 550px;
-        #lista-eventos {
-          .event-item {
-            .date-container {
-              .date {
-                width: 7rem;
-                .day { font-size: 3rem; }
-                .month { font-size: 2rem; }
-                .year { font-size: 1rem; }
-              }
+    width: 550px;
+      #lista-eventos {
+        .event-item {
+          .date-container {
+            .date {
+              width: 7rem;
+              .day { font-size: 3rem; }
+              .month { font-size: 2rem; }
+              .year { font-size: 1rem; }
             }
-            .info-date-container {
-              .city { 
-                padding: 1rem;
-                border: 1px #fff solid;
-                font-size: 1.3rem; 
-              }
-              .venue-container {
-                .venue { font-size: 1.5rem; }
-                .hour { font-size: 1.3rem; }
-              }
+          }
+          .info-date-container {
+            .city { 
+              padding: 1rem;
+              border: 1px #fff solid;
+              font-size: 1.3rem; 
+            }
+            .venue-container {
+              .venue { font-size: 1.5rem; }
+              .hour { font-size: 1.3rem; }
             }
           }
         }
       }
+    }
   }
 
   #gallery-section {
@@ -1145,7 +1147,7 @@ footer {
   }
 
   #fechas {
-    padding: 70px 0;
+    padding: 100px 0;
     .title-section {
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
@@ -1182,7 +1184,7 @@ footer {
       }
     }
   }
-
+  
   #gallery-section {
     padding: 50px 0;
     #background-gallery {
