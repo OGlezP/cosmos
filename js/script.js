@@ -7,6 +7,10 @@ const images =  Array.from(document.querySelectorAll('.img'));
 const lightboxImg = Array.from(document.querySelectorAll('.lightbox-item'));
 const exitButton = document.querySelector('.close-button');
 const lightBox = document.querySelector('.lightbox-container');
+
+const navToggler = document.querySelector('.navbar-toggler');
+const toggleNavBar = document.querySelector('.navbar-collapse')
+
 let index = 0, interval;
 let items = [], dotElement = [];
 
@@ -78,6 +82,12 @@ function  handleNavLinks() {
     let id = document.getElementById(s2); 
     scrollTo(id);
     
+    if (toggleNavBar.classList.contains('show')) {
+        toggleNavBar.classList.remove('show');
+        navToggler.classList.add('collapsed');
+        navToggler.setAttribute('aria-expanded', false);
+    }
+
     this.classList.add('selected');
     navBarItem.forEach(link => {
         if (link.classList.contains('selected')) {
@@ -176,6 +186,8 @@ function handleDirection() {
     }
     lightboxImg[index].classList.add('visible');
 }
+
+
 /////fin galeria functions///////
 //************************************************** */
 

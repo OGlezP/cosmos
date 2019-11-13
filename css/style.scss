@@ -80,6 +80,7 @@ html {
   #social-icons {
     position: absolute;
     right: 2rem;
+    top: 1.1rem;
     i {
       padding: 5px;
       font-size: 1.5rem;
@@ -115,10 +116,10 @@ html {
 @media screen and (max-width: 991px){
   #navbar {
     height: auto;
-    background-color: rgba(172, 172, 172, 0.6);
+    background-color: rgba(0, 0, 0, 0.9);
     #button {
       padding: 2px;
-      font-size: 23px;
+      font-size: 2rem;
       border: #fff 1px solid;
       color: #fff;
     }
@@ -129,19 +130,16 @@ html {
       margin-top: .5rem;
       text-align: center;
       .navbar-item {
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         .nav-link {
-          font-weight: bolder;
+         width: 100%;
         }
-      }
-      .navbar-item:hover {
-        border: 1px $color-border solid;
       }
     }
   }
   #navbar.scroll {
-    opacity: 0.9;
+    opacity: 0.95;
   }
 }
 
@@ -312,7 +310,6 @@ html {
     border-radius: 1rem;
     padding: 1rem;
     .item {
-      background-color: rgba(41, 38, 39, 0.664);
       padding: 1rem;
       .portada-and-description {
         @include center;
@@ -858,19 +855,19 @@ footer {
       }
     }
     #information {
-      width: 70%;
+      width: 75%;
       h1 {
-        font-size: 7vw;
+        font-size: 6.5vw;
         margin-bottom: 2rem;
       }
       #text-introduccion {
-        width: 95%;
+        width: 100%;
         padding: 1rem;
         p {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           #cosmos-span {
             font-weight: 600; 
-            font-size: 1.7rem;
+            font-size: 1.5rem;
           }
         }
       }
@@ -987,20 +984,20 @@ footer {
           }
         }
       }
-      .lightbox-container {
-        .close-button {
-          font-size: 4rem;
-        }
-        .lightbox-item {
-          width: 75%;
-          padding: .5rem;
-        }
-        .arrows {
-          font-size: 2rem;
-          width: 90%;
-          .arrow {
-            padding: 1rem;
-          }
+    }
+    .lightbox-container {
+      .close-button {
+        font-size: 4rem;
+      }
+      .lightbox-item {
+        width: 75%;
+        padding: .5rem;
+      }
+      .arrows {
+        font-size: 2rem;
+        width: 90%;
+        .arrow {
+          padding: 1rem;
         }
       }
     }
@@ -1060,9 +1057,9 @@ footer {
 
 @media screen and (max-width: 600px) {
   #home {
-    height: 50vh;
+    height: 60vh;
     .items-container {
-       height: 50vh;
+       height: 60vh;
        .item {
          height: 100%;
        }
@@ -1073,19 +1070,20 @@ footer {
     #information {
       width: 80%;
       h1 {
-        font-size: 7vw;
+        font-size: 6vw;
+        margin-bottom: 1rem;
       }
       #text-introduccion {
         width: 100%;
-        padding: 1rem;
+        padding: .4rem;
         p {
-          font-size: 2.1vw;
+          font-size: 1.8vw;
         }
       }
     }
   }
   #home::before {
-    height: 50vh;
+    height: 60vh;
   }
 
   #album-section {
@@ -1188,7 +1186,9 @@ footer {
   #gallery-section {
     padding: 50px 0;
     #background-gallery {
-      content: url("../img/back-mobile-gallery.jpg");
+     // content: url("../img/back-mobile-gallery.jpg");
+     background-image: url('');
+     background-color: rgb(233, 233, 233);
     }
     .title-section {
       font-size: 2.5rem;
@@ -1200,19 +1200,19 @@ footer {
       .item {
         grid-template-columns: auto auto;
       }
-      .lightbox-container {
-        .close-button {
-          font-size: 3.5rem;
-        }
-        .lightbox-item {
-          width: 80%;
-        }
-        .arrows {
-          font-size: 1.8rem;
-          width: 95%;
-          .arrow {
-            padding: .7rem;
-          }
+    }
+    .lightbox-container {
+      .close-button {
+        font-size: 3.5rem;
+      }
+      .lightbox-item {
+        width: 80%;
+      }
+      .arrows {
+        font-size: 1.8rem;
+        width: 95%;
+        .arrow {
+          padding: .7rem;
         }
       }
     }
