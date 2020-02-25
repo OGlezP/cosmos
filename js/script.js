@@ -199,7 +199,7 @@ navBarItem.forEach(link => link.addEventListener('click', handleNavLinks));
 
 images.forEach(img => img.addEventListener('click', handleClickOnItem));
 exitButton.addEventListener('click', exitFunction);
-//arrows.forEach(arrow => arrow.addEventListener('click', handleDirection));
+arrows.forEach(arrow => arrow.addEventListener('click', handleDirection));
 document.addEventListener('DOMContentLoaded', () => {
     navBar.classList.add('menu-scrolled-down');
     interval = setInterval(startAnimationOnLoad, 3000);
