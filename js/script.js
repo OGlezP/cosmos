@@ -10,6 +10,8 @@ const lightBox = document.querySelector('.lightbox-container');
 let index = 0, interval;
 let items = [], dotElement = [];
 
+
+
 function startAnimationOnLoad() {
     let temp = document.getElementById('home');
 
@@ -22,8 +24,15 @@ function startAnimationOnLoad() {
     if(dotElement.length > 0) { dotElement[index].classList.add('active'); }
 }
 
+
+
 function clearCurrentItem(temp) {
-    items = Array.from(temp.querySelectorAll('.items-container .item'));
+    if(temp.id == 'lightbox') {
+        items = Array.from(temp.querySelectorAll('.lightbox-item'));
+    } else {
+        items = Array.from(temp.querySelectorAll('.items-container .item'));
+    }
+
     dotElement = Array.from(temp.querySelectorAll('.dots .dot'));
 
     if(!items || items.length == 0) { return }
@@ -36,6 +45,8 @@ function clearCurrentItem(temp) {
         }
     });
 }
+
+
 
 function handleArrows() {
     let temp = this.parentElement.parentElement;
@@ -57,6 +68,7 @@ function handleArrows() {
 }
 
 
+
 function handleDots() {
     let temp = this.parentElement.parentElement;
     if(temp.id == 'home') { clearInterval(interval); }
@@ -70,34 +82,9 @@ function handleDots() {
     if(temp.id == 'home') { interval = setInterval(startAnimationOnLoad, 3000); }
 }
 
-//click on each nav link item ///////////////////
-///*/////////
-function  handleNavLinks() {
-    let s1 = this.id;
-    let s2 = s1.substr(1); 
-    let id = document.getElementById(s2); 
-    scrollTo(id);
-    
-    this.classList.add('selected');
-    navBarItem.forEach(link => {
-        if (link.classList.contains('selected')) {
-            link.classList.remove('selected');
-        }
-    });
-}
-
-scrollTo = (element) => {
-    window.scroll({
-        behavior: 'smooth',
-        left: 0,
-        top: element.offsetTop 
-      });   
-    console
-  }
 
 
-//menu on scroll//////////////////////////////////
-///******************************************** */
+//menu on scroll///////////////////////////////////
 function navbarOnScroll() {
     let scrollDistance = window.pageYOffset;
     let rect = sections[0].getBoundingClientRect();
@@ -132,6 +119,7 @@ function navbarOnScroll() {
 }
 
 
+
 function cleanSelectedItem(item) {
     navBarItem.forEach(link => {
         if (link.classList.contains('selected') && link != item) {
@@ -140,15 +128,43 @@ function cleanSelectedItem(item) {
     });
 }
 
-//GAleria functions/////////////////////////////////
-//****************************************************8 */
 
+
+//click on each nav link item ///////////////////////////////
+function  handleNavLinks() {
+    let s1 = this.id;
+    let s2 = s1.substr(1); 
+    let id = document.getElementById(s2); 
+    scrollTo(id);
+    
+    this.classList.add('selected');
+    navBarItem.forEach(link => {
+        if (link.classList.contains('selected')) {
+            link.classList.remove('selected');
+        }
+    });
+}
+
+scrollTo = (element) => {
+    window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: element.offsetTop 
+      });   
+    console
+}
+
+
+
+//GAleria functions/////////////////////////////////
 function handleClickOnItem() {
     let index = images.indexOf(this);
     lightBox.classList.add('active');
 
     lightboxImg[index].classList.add('visible');
 }
+
+
 
 function exitFunction() {
     lightBox.classList.remove('active');
@@ -158,26 +174,7 @@ function exitFunction() {
     });
 }
 
-function handleDirection() {
-    let index = 0;
-    lightboxImg.forEach(item => {
-        if(item.classList.contains('visible')) {
-            index = lightboxImg.indexOf(item);
-            item.classList.remove('visible');
-        }
-    });
 
-    if(this.id == 'right-arrow') {
-        index++;
-        if(index > lightboxImg.length - 1) { index = 0; }
-    } else {
-        index--;
-        if(index < 0) { index = lightboxImg.length - 1; }
-    }
-    lightboxImg[index].classList.add('visible');
-}
-/////fin galeria functions///////
-//************************************************** */
 
 //adding events to elements
 arrows.forEach(arrow => arrow.addEventListener('click', handleArrows));
@@ -187,7 +184,6 @@ navBarItem.forEach(link => link.addEventListener('click', handleNavLinks));
 
 images.forEach(img => img.addEventListener('click', handleClickOnItem));
 exitButton.addEventListener('click', exitFunction);
-arrows.forEach(arrow => arrow.addEventListener('click', handleDirection));
 document.addEventListener('DOMContentLoaded', () => {
     navBar.classList.add('menu-scrolled-down');
     interval = setInterval(startAnimationOnLoad, 3000);

@@ -197,6 +197,7 @@ html {
       opacity: .5;
       transition: all .2s;
       border-radius: .5rem;
+      cursor: pointer;
     }
     .arrow:hover {
       opacity: 1;
@@ -399,9 +400,8 @@ html {
     height: 100%;
     .item {
       padding-bottom: 6rem;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 1s ease-in;
+      display: none;
+      transition: opacity .6s ease-in;
       .video {
         height: 100%;
         position: relative;
@@ -432,19 +432,29 @@ html {
       }
     }
     .item.visible {
-      opacity: 1;
-      visibility: visible;
+      display: block;
+      transition: opacity .6s ease-in;
+      z-index: 1;
     }
   }
-  /*.arrows {
-    z-index: 1;
+  .arrows {
+    z-index: 0;
     font-size: 3.5rem;
     color: #fff;
     position: absolute;
     width: 80%;
     display: inline-flex;
     justify-content: space-between;
-  }*/
+    .arrow {
+      cursor: pointer;
+      padding: 1rem;
+      border-radius: .5rem;
+    }
+    .arrow:hover {
+      background-color: rgba(128, 128, 128, 0.356);
+      transition: all .6s;
+    }
+  }
 }
 
 //Inicio de Formato de seccion fechas************
@@ -633,6 +643,7 @@ html {
     z-index: 2;
     .close-button {
       position: absolute;
+      cursor: pointer;
       top: 4rem;
       right: 6rem;
       font-size: 5rem;
@@ -711,7 +722,7 @@ html {
   width: 100%;
   height: auto;
   background-color: rgb(15, 15, 15);
-  padding: 80px 0;
+  padding: 100px 0;
   .title-section {
     @include style-subtittles();
     margin: 2rem;
@@ -764,7 +775,7 @@ html {
 
 //Footer///////////////////
 footer {
-  padding: 50px 0;
+  padding: 100px 0;
   width: 100%;
   background-color: rgb(43, 42, 42);
   #social-container {

@@ -181,6 +181,7 @@ html {
   opacity: .5;
   transition: all .2s;
   border-radius: .5rem;
+  cursor: pointer;
 }
 
 #home .arrows .arrow:hover {
@@ -427,15 +428,6 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /*.arrows {
-    z-index: 1;
-    font-size: 3.5rem;
-    color: #fff;
-    position: absolute;
-    width: 80%;
-    display: inline-flex;
-    justify-content: space-between;
-  }*/
 }
 
 #video-section .title-section {
@@ -454,9 +446,8 @@ html {
 
 #video-section .items-container .item {
   padding-bottom: 6rem;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease-in;
+  display: none;
+  transition: opacity .6s ease-in;
 }
 
 #video-section .items-container .item .video {
@@ -492,8 +483,30 @@ html {
 }
 
 #video-section .items-container .item.visible {
-  opacity: 1;
-  visibility: visible;
+  display: block;
+  transition: opacity .6s ease-in;
+  z-index: 1;
+}
+
+#video-section .arrows {
+  z-index: 0;
+  font-size: 3.5rem;
+  color: #fff;
+  position: absolute;
+  width: 80%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+#video-section .arrows .arrow {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: .5rem;
+}
+
+#video-section .arrows .arrow:hover {
+  background-color: rgba(128, 128, 128, 0.356);
+  transition: all .6s;
 }
 
 #fechas {
@@ -733,6 +746,7 @@ html {
 
 #gallery-section .lightbox-container .close-button {
   position: absolute;
+  cursor: pointer;
   top: 4rem;
   right: 6rem;
   font-size: 5rem;
@@ -815,7 +829,7 @@ html {
   width: 100%;
   height: auto;
   background-color: #0f0f0f;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 #contacto .title-section {
@@ -877,7 +891,7 @@ html {
 }
 
 footer {
-  padding: 50px 0;
+  padding: 100px 0;
   width: 100%;
   background-color: #2b2a2a;
 }
