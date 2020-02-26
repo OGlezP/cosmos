@@ -7,6 +7,10 @@ const images =  Array.from(document.querySelectorAll('.img'));
 const lightboxImg = Array.from(document.querySelectorAll('.lightbox-item'));
 const exitButton = document.querySelector('.close-button');
 const lightBox = document.querySelector('.lightbox-container');
+
+const navToggler = document.querySelector('.navbar-toggler');
+const toggleNavBar = document.querySelector('.navbar-collapse')
+
 let index = 0, interval;
 let items = [], dotElement = [];
 
