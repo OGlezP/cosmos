@@ -222,6 +222,23 @@ html {
   flex-direction: column;
 }
 
+#home #information #logo-audio-coscmos {
+  width: 100%;
+  max-height: 250px;
+  border: 0.3rem solid rgba(238, 238, 238, 0.342);
+  overflow: hidden;
+  text-align: center;
+  background-color: black;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+#home #information #logo-audio-coscmos video {
+  width: 80%;
+  position: relative;
+  top: -55px;
+}
+
 #home #information h1 {
   color: #ABA561;
   font-family: 'Merriweather Sans', sans-serif;
@@ -999,6 +1016,13 @@ footer #social-container #icons .social-icon:hover .social-name {
   #home #information {
     width: 75%;
   }
+  #home #information #logo-audio-coscmos {
+    height: 20vw;
+  }
+  #home #information #logo-audio-coscmos video {
+    position: relative;
+    top: -55px;
+  }
   #home #information h1 {
     font-size: 6.5vw;
     margin-bottom: 2rem;
@@ -1186,6 +1210,13 @@ footer #social-container #icons .social-icon:hover .social-name {
   }
   #home #information {
     width: 80%;
+  }
+  #home #information #logo-audio-coscmos {
+    height: 16vw;
+  }
+  #home #information #logo-audio-coscmos video {
+    position: relative;
+    top: -50px;
   }
   #home #information h1 {
     font-size: 6vw;
