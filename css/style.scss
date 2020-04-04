@@ -44,6 +44,7 @@ $color-dates: #F23725;
 
 html {
   margin: 0;
+  background-color: rgb(90, 66, 66);
   font-size: 10px;
 }
 
@@ -152,23 +153,38 @@ html {
      }
 }
   
+#logo-audio-coscmos {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  video {
+    width: 100% !important;
+    margin-top: 4rem;
+  }
+}
+
 #home {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   @include center;
+  flex-direction: column;
+  background-color: rgb(3,3,3);
   position: relative;
   .items-container {
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     overflow: hidden;
     .item {
       position: absolute;
       width: 100%;
-      height: 100%;
+      height: 60vh;
       opacity: 0;
       transition: opacity 2s ease;
-      background-position: center;
-      background-size: cover;
+      background-position: bottom;
+      background-size: 100% 100%;
       background-attachment: fixed;
       background-repeat: no-repeat;
     }
@@ -227,24 +243,11 @@ html {
     z-index: 1;
     width: 800px;
     position: absolute;
+    top: -5rem;
     @include center;
+    align-items: flex-start;
     flex-direction: column;
-    #logo-audio-coscmos {
-      width: 100%;
-      max-height: 250px;
-      border: .3rem solid rgba(238, 238, 238, 0.342);
-      overflow: hidden;
-      text-align: center;
-      background-color: black;
-      border-radius: 1rem;
-      margin-bottom: 1rem;
-      video {
-        width: 80%;
-        position: relative;
-        top: -55px;
-      }
-    }
-    h1 {
+    /*h1 {
       color:$title-color;
       font-family: 'Merriweather Sans', sans-serif;
       font-size: 10rem;
@@ -253,38 +256,45 @@ html {
       border-top:  #fff 2px solid;
       border-bottom: #fff 2px solid;
       margin-bottom: 2rem;
-    }
+    }*/
     #text-introduccion {
-      background-color: rgba(0, 0, 0, 0.76);
+      background-color: rgba(0, 0, 0, 0.513);
       @include box-shadows;
       height: auto;
-      width: 90%;
-      padding: 1rem;
+      width: 100%;
+      padding: 3rem 1rem;
       p {
         display: block;
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-family: 'Noticia Text', serif;
         letter-spacing: .15rem;
         text-align: center;
         #cosmos-span {
           color: #ABA561; 
           font-weight: 400; 
-          font-size: 1.8rem;
+          font-size: 2.5rem;
         }
+      }
+      #line {
+        border: 1px solid rgb(100, 100, 100);
+      }
+      p{
         #descarga {
+          font-size: 1.9rem;
           color: $color-border;
           animation: blink .8s linear infinite;
-	      }
+        }
+        a{
+          font-size: 1.9rem;
+          color: #ABA561;
+        }
         @keyframes blink{
           40%{opacity: .4;}
           60%{opacity: .6;}
           80%{opacity: .8;}
           100%{opacity: 1;}
         }
-      }
-      #line {
-        border: .2px dotted #fff;
       }
     }
   }
@@ -293,14 +303,13 @@ html {
 #home::before {
   content: "";
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   left: 0;
   top: 0;
   position: absolute;
-  background-color: rgb(73, 70, 70);
   background-image: url('../img/what-the-hex-dark.png');
   background-repeat: repeat;
-  opacity: .6;
+  opacity: .7;
   z-index: 1;
 }
 
@@ -855,10 +864,14 @@ footer {
 ///////////////////////////////////
 
 @media screen and (max-width: 980px) {
+  #logo-audio-coscmos {
+    height: 30vh;
+  }
+
   #home {
-    height: 90vh;
+    height: 45vh;
     .items-container {
-      height: 90vh;
+      height: 45vh;
       .item {
         height: 100%;
       }
@@ -882,20 +895,12 @@ footer {
     }
     #information {
       width: 75%;
-      #logo-audio-coscmos {
-        height: 20vw;
-        video {
-          position: relative;
-          top: -55px;
-        }
-      }
-      h1 {
+      /*h1 {
         font-size: 6.5vw;
         margin-bottom: 2rem;
-      }
+      }*/
       #text-introduccion {
         width: 100%;
-        padding: 1rem;
         p {
           font-size: 1.3rem;
           #cosmos-span {
@@ -903,12 +908,20 @@ footer {
             font-size: 1.5rem;
           }
         }
+        p{
+          #descarga {
+            font-size: 1.3rem;
+          }
+          a{
+            font-size: 1.3rem;
+          }
+        }
       }
     }
   }
 
   #home::before {
-    height: 90vh;
+    height: 45vh;
   }
 
   #album-section {
@@ -1089,10 +1102,14 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+  #logo-audio-coscmos {
+    height: 25vh;
+  }
+
   #home {
-    height: 60vh;
+    height: 35vh;
     .items-container {
-       height: 60vh;
+       height: 35vh;
        .item {
          height: 100%;
        }
@@ -1102,28 +1119,29 @@ footer {
     }
     #information {
       width: 80%;
-      #logo-audio-coscmos {
-        height: 16vw;
-        video {
-          position: relative;
-          top: -50px;
-        }
-      }
-      h1 {
+      /*h1 {
         font-size: 6vw;
         margin-bottom: 1rem;
-      }
+      }*/
       #text-introduccion {
         width: 100%;
         padding: .4rem;
         p {
           font-size: 1.8vw;
         }
+        p{
+          #descarga {
+            font-size: 1rem;
+          }
+          a{
+            font-size: 1rem;
+          }
+        }
       }
     }
   }
   #home::before {
-    height: 60vh;
+    height: 35vh;
   }
 
   #album-section {

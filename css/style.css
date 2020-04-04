@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
 html {
   margin: 0;
+  background-color: #5a4242;
   font-size: 10px;
 }
 
@@ -120,29 +121,45 @@ html {
   }
 }
 
+#logo-audio-coscmos {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
+#logo-audio-coscmos video {
+  width: 100% !important;
+  margin-top: 4rem;
+}
+
 #home {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background-color: #030303;
   position: relative;
 }
 
 #home .items-container {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   overflow: hidden;
 }
 
 #home .items-container .item {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 60vh;
   opacity: 0;
   transition: opacity 2s ease;
-  background-position: center;
-  background-size: cover;
+  background-position: bottom;
+  background-size: 100% 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
@@ -216,42 +233,26 @@ html {
   z-index: 1;
   width: 800px;
   position: absolute;
+  top: -5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-}
-
-#home #information #logo-audio-coscmos {
-  width: 100%;
-  max-height: 250px;
-  border: 0.3rem solid rgba(238, 238, 238, 0.342);
-  overflow: hidden;
-  text-align: center;
-  background-color: black;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-}
-
-#home #information #logo-audio-coscmos video {
-  width: 80%;
-  position: relative;
-  top: -55px;
-}
-
-#home #information h1 {
-  color: #ABA561;
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 10rem;
-  line-height: 1;
-  letter-spacing: .3rem;
-  border-top: #fff 2px solid;
-  border-bottom: #fff 2px solid;
-  margin-bottom: 2rem;
+  /*h1 {
+      color:$title-color;
+      font-family: 'Merriweather Sans', sans-serif;
+      font-size: 10rem;
+      line-height: 1;
+      letter-spacing: .3rem;
+      border-top:  #fff 2px solid;
+      border-bottom: #fff 2px solid;
+      margin-bottom: 2rem;
+    }*/
 }
 
 #home #information #text-introduccion {
-  background-color: rgba(0, 0, 0, 0.76);
+  background-color: rgba(0, 0, 0, 0.513);
   border: 2px solid #413e3e;
   border-radius: .5rem;
   box-shadow: 0px 50px 60px -25px rgba(0, 0, 0, 0.774);
@@ -259,14 +260,14 @@ html {
   -webkit-box-shadow: 0px 50px 60px -25px black;
   -ms-box-shadow: 0px 50px 60px -25px black;
   height: auto;
-  width: 90%;
-  padding: 1rem;
+  width: 100%;
+  padding: 3rem 1rem;
 }
 
 #home #information #text-introduccion p {
   display: block;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: 'Noticia Text', serif;
   letter-spacing: .15rem;
   text-align: center;
@@ -275,12 +276,22 @@ html {
 #home #information #text-introduccion p #cosmos-span {
   color: #ABA561;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
+}
+
+#home #information #text-introduccion #line {
+  border: 1px solid #646464;
 }
 
 #home #information #text-introduccion p #descarga {
+  font-size: 1.9rem;
   color: #df6358;
   animation: blink .8s linear infinite;
+}
+
+#home #information #text-introduccion p a {
+  font-size: 1.9rem;
+  color: #ABA561;
 }
 
 @keyframes blink {
@@ -298,21 +309,16 @@ html {
   }
 }
 
-#home #information #text-introduccion #line {
-  border: .2px dotted #fff;
-}
-
 #home::before {
   content: "";
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   left: 0;
   top: 0;
   position: absolute;
-  background-color: #494646;
   background-image: url("../img/what-the-hex-dark.png");
   background-repeat: repeat;
-  opacity: .6;
+  opacity: .7;
   z-index: 1;
 }
 
@@ -985,11 +991,14 @@ footer #social-container #icons .social-icon:hover .social-name {
 }
 
 @media screen and (max-width: 980px) {
+  #logo-audio-coscmos {
+    height: 30vh;
+  }
   #home {
-    height: 90vh;
+    height: 45vh;
   }
   #home .items-container {
-    height: 90vh;
+    height: 45vh;
   }
   #home .items-container .item {
     height: 100%;
@@ -1015,21 +1024,13 @@ footer #social-container #icons .social-icon:hover .social-name {
   }
   #home #information {
     width: 75%;
-  }
-  #home #information #logo-audio-coscmos {
-    height: 20vw;
-  }
-  #home #information #logo-audio-coscmos video {
-    position: relative;
-    top: -55px;
-  }
-  #home #information h1 {
-    font-size: 6.5vw;
-    margin-bottom: 2rem;
+    /*h1 {
+        font-size: 6.5vw;
+        margin-bottom: 2rem;
+      }*/
   }
   #home #information #text-introduccion {
     width: 100%;
-    padding: 1rem;
   }
   #home #information #text-introduccion p {
     font-size: 1.3rem;
@@ -1038,8 +1039,14 @@ footer #social-container #icons .social-icon:hover .social-name {
     font-weight: 600;
     font-size: 1.5rem;
   }
+  #home #information #text-introduccion p #descarga {
+    font-size: 1.3rem;
+  }
+  #home #information #text-introduccion p a {
+    font-size: 1.3rem;
+  }
   #home::before {
-    height: 90vh;
+    height: 45vh;
   }
   #album-section .items-container {
     width: 80%;
@@ -1196,11 +1203,14 @@ footer #social-container #icons .social-icon:hover .social-name {
 }
 
 @media screen and (max-width: 600px) {
+  #logo-audio-coscmos {
+    height: 25vh;
+  }
   #home {
-    height: 60vh;
+    height: 35vh;
   }
   #home .items-container {
-    height: 60vh;
+    height: 35vh;
   }
   #home .items-container .item {
     height: 100%;
@@ -1210,17 +1220,10 @@ footer #social-container #icons .social-icon:hover .social-name {
   }
   #home #information {
     width: 80%;
-  }
-  #home #information #logo-audio-coscmos {
-    height: 16vw;
-  }
-  #home #information #logo-audio-coscmos video {
-    position: relative;
-    top: -50px;
-  }
-  #home #information h1 {
-    font-size: 6vw;
-    margin-bottom: 1rem;
+    /*h1 {
+        font-size: 6vw;
+        margin-bottom: 1rem;
+      }*/
   }
   #home #information #text-introduccion {
     width: 100%;
@@ -1229,8 +1232,14 @@ footer #social-container #icons .social-icon:hover .social-name {
   #home #information #text-introduccion p {
     font-size: 1.8vw;
   }
+  #home #information #text-introduccion p #descarga {
+    font-size: 1rem;
+  }
+  #home #information #text-introduccion p a {
+    font-size: 1rem;
+  }
   #home::before {
-    height: 60vh;
+    height: 35vh;
   }
   #album-section {
     padding: 50px 0;
