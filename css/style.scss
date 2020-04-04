@@ -160,11 +160,6 @@ html {
   align-items: center;
   justify-content: center;
   background-color: rgb(0, 0, 0);
-  video {
-    width: 100% !important;
-    height: auto !important;
-    margin-top: 4rem;
-  }
 }
 
 #home {
@@ -244,7 +239,7 @@ html {
     z-index: 1;
     width: 800px;
     position: absolute;
-    top: -5rem;
+    top: -2rem;
     @include center;
     align-items: flex-start;
     flex-direction: column;
