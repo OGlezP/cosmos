@@ -127,11 +127,13 @@ html {
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: black;
 }
 
 #logo-audio-coscmos video {
   width: 100% !important;
+  height: auto !important;
   margin-top: 4rem;
 }
 
