@@ -190,8 +190,8 @@ images.forEach(img => img.addEventListener('click', handleClickOnItem));
 exitButton.addEventListener('click', exitFunction);
 document.addEventListener('DOMContentLoaded', () => {
     let vid = document.getElementById("video-logo");
-    //console.log(vid, 'hhh');
-    //vid.autoplay = true;
+    console.log(vid, 'hhh');
+    vid.autoplay = true;
     
     navBar.classList.add('menu-scrolled-down');
     interval = setInterval(startAnimationOnLoad, 3000);
